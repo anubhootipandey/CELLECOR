@@ -67,9 +67,7 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li className="m-2 py-2">
-                  <a href="#" className="anime">
-                    Privacy Policy
-                  </a>
+                  <Link to='/privacy-policy'>Privacy Policy</Link>
                 </li>
                 <li className="m-2 py-2">
                   <a href="#" className="anime">

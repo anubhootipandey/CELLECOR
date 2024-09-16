@@ -5,6 +5,8 @@ import Head from './Home/Head'
 import Home from './Home/Home'
 import About from './components/Company/About'
 import Navbar from './components/Navbar';
+import PrivacyPolicy from './components/S&W/PrivacyPolicy';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -18,7 +20,9 @@ const App = () => {
     <Routes>
       <Route exact path='/' element={<Home/>} />
       <Route exact path='/about' element={<About/>} />
+      <Route exact path='/privacy-policy' element={<PrivacyPolicy />} />
     </Routes>
+    <Footer />
     </BrowserRouter>
     </>
   )
