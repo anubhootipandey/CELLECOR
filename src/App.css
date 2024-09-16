@@ -1,3 +1,4 @@
+/* Navbar */
 .anime {
     position: relative; 
 }
@@ -16,3 +17,5 @@
 .anime:hover::before {
     width: 100%; 
 }
+
+  

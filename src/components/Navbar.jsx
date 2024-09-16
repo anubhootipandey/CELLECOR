@@ -268,11 +268,11 @@ const Navbar = () => {
         
         {activeMenu === "company" && (
           <div>
-           <div className="flex p-3 gap-16 bg-[#f8f8f8]">
+           <div className="flex p-3 gap-24 bg-[#f8f8f8]">
               <button className="" onClick={handleBackClick}>
                 <i className="fa-solid fa-arrow-left"></i>
               </button>
-              <p>SHOP BY CATEGORY</p>
+              <p>COMPANY</p>
             </div>
             <ul className="flex flex-col h-[100vh]">
               <li className="border-b p-3">
