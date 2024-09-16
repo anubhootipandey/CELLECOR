@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,9 +23,7 @@ const Navbar = () => {
 
         <div className="flex gap-10 font-semibold max-xl:hidden">
           <div>
-            <a href="#" className="anime">
-              HOME
-            </a>
+          <Link to='/' className="anime">Home</Link>
           </div>
           <div className="relative group">
             <a href="#" className="anime">
@@ -68,9 +67,7 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li className="m-2 py-2">
-                  <a href="#" className="anime">
-                    Privacy Policy
-                  </a>
+                  <Link to='/privacy-policy'>Privacy Policy</Link>
                 </li>
                 <li className="m-2 py-2">
                   <a href="#" className="anime">
@@ -92,10 +89,8 @@ const Navbar = () => {
             </a>
             <div className="absolute hidden group-hover:block w-48 bg-white z-10">
               <ul>
-                <li className="m-2 py-2 border-b border-gray-300">
-                  <a href="#" className="anime">
-                    About Us
-                  </a>
+                <li className="m-2 py-2 border-b border-gray-300">    
+                  <Link to='/about' className="anime">About  Us</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
                   <a href="#" className="anime">

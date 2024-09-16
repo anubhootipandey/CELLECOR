@@ -1,6 +1,12 @@
 import React from 'react';
 import "./app.css"
-import Home from './Home/Home';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import Head from './Home/Head'
+import Home from './Home/Home'
+import About from './components/Company/About'
+import Navbar from './components/Navbar';
+import PrivacyPolicy from './components/S&W/PrivacyPolicy';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -8,7 +14,16 @@ import Home from './Home/Home';
 const App = () => {
   return (
     <>
-    <Home/>
+    <BrowserRouter>
+    <Head/>
+    <Navbar/>
+    <Routes>
+      <Route exact path='/' element={<Home/>} />
+      <Route exact path='/about' element={<About/>} />
+      <Route exact path='/privacy-policy' element={<PrivacyPolicy />} />
+    </Routes>
+    <Footer />
+    </BrowserRouter>
     </>
   )
 }
