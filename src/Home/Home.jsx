@@ -17,10 +17,8 @@ const Home = () => {
           <source src={video} type="video/mp4" />
         </video>
       </div>
-      <ImageSlider/>
-      <BestSeller/>
 
-      <ImageSlider />
+      <ImageSlider/>
 
       <div className="flex flex-col sm:flex-col lg:flex-row justify-center gap-5 w-full justify-center overflow-hidden p-2">
         <div className="overflow-hidden rounded-xl">
@@ -39,7 +37,7 @@ const Home = () => {
         </div>
       </div>
 
-      <BestSeller />
+      <BestSeller/>
 
       <div className="flex justify-between p-2 lg:p-16">
         <div>
