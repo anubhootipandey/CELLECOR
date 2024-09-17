@@ -115,12 +115,15 @@ function Footer() {
       <div className="bottom-bar container">
         <p>Copyright 2023 Cellecor All Rights Reserved</p>
         <div className="payment-methods">
-          <img src="/Images/visa.png" alt="Visa" />
-          <img src="/Images/mastercard.png" alt="Mastercard" />
-          <img src="/Images/paypal.png" alt="PayPal" />
-          <img src="/Images/american-express.png" alt="american express" />
-          <img src="/Images/apple-pay.png" alt="apply pay" />
-          <img src="/Images/google-pay.png" alt="google pay" />
+          <img src="../../src/assets/visa.png" alt="Visa" />
+          <img src="../../src/assets/mastercard.png" alt="Mastercard" />
+          <img src="../../src/assets/paypal.png" alt="PayPal" />
+          <img
+            src="../../src/assets/american-express.png"
+            alt="american express"
+          />
+          <img src="../../src/assets/apple-pay.png" alt="apply pay" />
+          <img src="../../src/assets/google-pay.png" alt="google pay" />
         </div>
       </div>
     </footer>

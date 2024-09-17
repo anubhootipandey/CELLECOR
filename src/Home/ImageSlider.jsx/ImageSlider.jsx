@@ -8,32 +8,32 @@ const ImageSlider = () => {
   const categories = [
     {
       id: 1,
-      src: "/Images/Neckband.jpg",
+      src: "../../src/assets/Neckband.jpg",
       alt: "Neckbands",
       label: "Neckbands",
     },
-    { id: 2, src: "/Images/speaker.jpg", alt: "Speakers", label: "Speakers" },
+    { id: 2, src: "./../src/assets/speaker.jpg", alt: "Speakers", label: "Speakers" },
     {
       id: 3,
-      src: "/Images/Smartwatch.jpg",
+      src: "../../src/assets/Smartwatch.jpg",
       alt: "Smartwatches",
       label: "Smartwatches",
     },
-    { id: 4, src: "/Images/TWS.jpg", alt: "TWS", label: "TWS" },
-    { id: 5, src: "/Images/Smarttv.jpg", alt: "SmartTv", label: "SmartTv" },
+    { id: 4, src: ".../../src/assets/TWS.jpg", alt: "TWS", label: "TWS" },
+    { id: 5, src: "/../../src/assets/Smarttv.jpg", alt: "SmartTv", label: "SmartTv" },
     {
       id: 6,
-      src: "/Images/Neckband.jpg",
+      src: "../../src/assets/Neckband.jpg",
       alt: "Neckbands",
       label: "Neckbands",
     },
     {
       id: 7,
-      src: "/Images/Smartwatch.jpg",
+      src: "../../src/assets/Smartwatch.jpg",
       alt: "Smartwatches",
       label: "Smartwatches",
     },
-    { id: 8, src: "/Images/TWS.jpg", alt: "TWS", label: "TWS" },
+    { id: 8, src: "../../src/assets/TWS.jpg", alt: "TWS", label: "TWS" },
   ];
 
   const updateSlider = () => {
