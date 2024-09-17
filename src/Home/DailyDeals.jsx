@@ -31,117 +31,105 @@ const CustomNextArrow = (props) => {
 const products = [
   {
     id: 1,
-    defaultImage:"https://cellecor.com/cdn/shop/files/orange2_0093ed46-75d2-4707-9643-2f93e882cc03.png?v=1709556414",
-    hoverImage:"https://cellecor.com/cdn/shop/files/MoodShot01_640x.png?v=1709556775",
-    colors: [
-      {
-        color: "Orange",
-        image:"https://cellecor.com/cdn/shop/files/orange2_0093ed46-75d2-4707-9643-2f93e882cc03.png?v=1709556414",
-      },
-      {
-        color: "gray",
-        image:"https://cellecor.com/cdn/shop/files/gray2_b511c9a8-41cd-4cef-8daf-a82880c9068e.png?v=1709556414",
-      },
-      {
-        color: "blue",
-        image:"https://cellecor.com/cdn/shop/files/blue2_3c45dbb5-5601-44f0-9b1e-42b91423aafb.png?v=1709556414",
-      },
-      {
-        color: "green",
-        image:"https://cellecor.com/cdn/shop/files/green2_a99b1325-622a-4f57-83d2-ec6eaf735ca8.png?v=1709556414",
-      },
-    ],
-    name: "Cellecor M2 Aqua",
-    priceOne: "Rs. 3,999.00",
-    priceTwo: "Rs. 1,499.00",
-    discount: "63%",
-  },
-  {
-    id: 2,
-    defaultImage:"https://cellecor.com/cdn/shop/files/M5_Silver_01_d5923a13-2dd5-4fcd-8acd-e6230796b550.png?v=1705655630",
-    hoverImage:"	https://cellecor.com/cdn/shop/files/M5moodshot.png?v=1705655630",
+    defaultImage:"https://cellecor.com/cdn/shop/files/Artboard1_97681864-6b48-457f-8ba1-d1c538543f65.png?v=1710164084",
+    hoverImage:"https://cellecor.com/cdn/shop/files/Artboard5_9235209b-4299-4317-a367-3116ba76e94a.png?v=1710164082",
     colors: [
       {
         color: "black",
-        image:"https://cellecor.com/cdn/shop/files/M5_Black_01_5827f3b8-4b2c-439f-b6b5-628f8b882652.png?v=1705655630",
+        image:"https://cellecor.com/cdn/shop/files/Artboard1_1b9fe953-9b4b-4300-978f-376607795797.png?v=1710164084",
       },
       {
-        color: "gray",
-        image:"https://cellecor.com/cdn/shop/files/M5_Silver_01_d5923a13-2dd5-4fcd-8acd-e6230796b550.png?v=1705655630",
+        color: "green",
+        image:"https://cellecor.com/cdn/shop/files/Artboard1_97681864-6b48-457f-8ba1-d1c538543f65.png?v=1710164084",
       },
     ],
-    name: "Cellecor M5 Eaze",
-    priceOne: "Rs. 3,999.00",
-    priceTwo: "Rs. 1,499.00",
+    name: "Cellecor A9 Pro Stark",
+    priceOne: "Rs. 9,499.00",
+    priceTwo: "Rs. 2,499.00",
     discount: "74%",
   },
   {
+    id: 2,
+    defaultImage:"https://cellecor.com/cdn/shop/files/Beats_03.png?v=1700656295",
+    hoverImage:"https://cellecor.com/cdn/shop/files/Beats_02.png?v=1700656295",
+    colors: [
+      {
+        color: "",
+        image:"",
+      },
+      {
+        color: "",
+        image:"",
+      },
+    ],
+    name: "Cellecor Beats",
+    priceOne: "Rs. 5,999.00",
+    priceTwo: "Rs. 1,899.00",
+    discount: "72%",
+  },
+  {
     id: 3,
-    defaultImage:"https://cellecor.com/cdn/shop/files/img9_a02057a2-193d-4a33-bc6b-7a67d0d859e3.png?v=1704979296",
-    hoverImage: "	https://cellecor.com/cdn/shop/files/M7_A.png?v=1704979567",
+    defaultImage:"https://cellecor.com/cdn/shop/files/BS2_Black_02.png?v=1686565558",
+    hoverImage: "https://cellecor.com/cdn/shop/files/BS2_Black_05.png?v=1686565558",
     colors: [
       {
         color: "black",
-        image:"https://cellecor.com/cdn/shop/files/img9_a02057a2-193d-4a33-bc6b-7a67d0d859e3.png?v=1704979296",
+        image:"https://cellecor.com/cdn/shop/files/BS2_Black_02.png?v=1686565558",
       },
       {
         color: "green",
-        image:"https://cellecor.com/cdn/shop/files/img14_8db74bad-007a-499b-a2ae-ed76a746fdc1.png?v=1704979296",
-      },
-      {
-        color: "orange",
-        image:"https://cellecor.com/cdn/shop/files/img4_b9febb0f-e9f7-4140-897d-c48516b26421.png?v=1704979296",
-      },
-    ],
-    name: "Cellecor M7 Pro Ray",
-    priceOne: "Rs. 8,999.00",
-    priceTwo: "Rs. 2,149.00",
-    discount: "76%",
-  },
-  {
-    id: 4,
-    defaultImage:"https://cellecor.com/cdn/shop/files/img14_fa764436-5fd8-4a84-b11d-9e8d759f98eb.png?v=1703062180",
-    hoverImage: "https://cellecor.com/cdn/shop/files/m3-air.png?v=1703062180",
-    colors: [
-      {
-        color: "black",
-        image:"https://cellecor.com/cdn/shop/files/img14_fa764436-5fd8-4a84-b11d-9e8d759f98eb.png?v=1703062180",
+        image:"	https://cellecor.com/cdn/shop/files/BS2_Green_02.png?v=1686565558",
       },
       {
         color: "blue",
-        image:"https://cellecor.com/cdn/shop/files/img4_336dd559-ca88-4130-bfcd-f0bbba489efc.png?v=1703062180",
+        image:"	https://cellecor.com/cdn/shop/files/BS2_Blue_02.png?v=1686565558",
       },
       {
         color: "gray",
-        image:"https://cellecor.com/cdn/shop/files/img9_92bab978-4671-425c-8059-51e36d3a2d61.png?v=1703062178",
+        image:"https://cellecor.com/cdn/shop/files/BS2_Grey_02.png?v=1686565558",
       },
     ],
-    name: "Cellecor M3 Air",
-    priceOne: "Rs. 4,999.00",
-    priceTwo: "Rs. 1,699.00",
-    discount: "66%",
+    name: "Cellecor BS-2",
+    priceOne: "Rs. 3,499.00",
+    priceTwo: "Rs. 999.00",
+    discount: "71%",
   },
   {
-    id: 5,
-    defaultImage:"https://cellecor.com/cdn/shop/files/Artboard7_5c7dcda1-79c7-471e-9fe5-5f1bc264f9eb.png?v=1701081359",
-    hoverImage:"https://cellecor.com/cdn/shop/files/05_211cb655-ab64-469f-befc-dcde7d8f5be3.png?v=1701081362",
+    id: 4,
+    defaultImage:"	https://cellecor.com/cdn/shop/files/BT703_Black_02.png?v=1700641323",
+    hoverImage: "https://cellecor.com/cdn/shop/files/BT703_Black_04.png?v=1700641323",
     colors: [
       {
         color: "black",
-        image:"https://cellecor.com/cdn/shop/files/Artboard7_5c7dcda1-79c7-471e-9fe5-5f1bc264f9eb.png?v=1701081359",
+        image:"	https://cellecor.com/cdn/shop/files/BT703_Black_02.png?v=1700641323",
       },
       {
-        color: "white",
-        image:"https://cellecor.com/cdn/shop/files/Artboard2_d1033dd6-dfa4-454e-852b-78c2516d9f38.png?v=1701081359",
-      },
-      {
-        color: "gray",
-        image:"https://cellecor.com/cdn/shop/files/Artboard12_c55f9a4e-7708-47db-b314-c1e16260e269.png?v=1701081359",
+        color: "blue",
+        image:"https://cellecor.com/cdn/shop/files/BT703_Blue_02.png?v=1700641323",
       },
     ],
-    name: "Cellecor BROPODS CB03 ACE",
+    name: "Cellecor BT 703",
+    priceOne: "Rs. 3,999.00",
+    priceTwo: "Rs. 1,299.00",
+    discount: "68%",
+  },
+  {
+    id: 5,
+    defaultImage:"	https://cellecor.com/cdn/shop/files/Cruzio_03.png?v=1700658917",
+    hoverImage:"https://cellecor.com/cdn/shop/files/Cruzio_02.png?v=1700658917",
+    colors: [
+      {
+        color: "",
+        image:"",
+      },
+      {
+        color: "",
+        image:"",
+      },
+    ],
+    name: "Cellecor Cruzio",
     priceOne: "Rs. 4,999.00",
-    priceTwo: "Rs. 1,349.00",
+    priceTwo: "Rs. 1,899.00",
     discount: "73%",
   },
   {
@@ -163,9 +151,36 @@ const products = [
     priceTwo: "Rs. 949.00",
     discount: "76%",
   },
+  {
+    id: 7,
+    defaultImage:"https://cellecor.com/cdn/shop/files/Artboard1copy_6163289e-5889-4751-a040-7778da4bb979.png?v=1710151598",
+    hoverImage: "https://cellecor.com/cdn/shop/files/03_a58eb9a2-2df1-45a0-b169-e977cd909c30.png?v=1710151598",
+    colors: [
+      {
+        color: "black",
+        image:"https://cellecor.com/cdn/shop/files/Artboard1_a9576b59-5bd2-44a0-b30d-7048e54e3e75.png?v=1710151598",
+      },
+      {
+        color: "green",
+        image:"	https://cellecor.com/cdn/shop/files/Artboard1copy3.png?v=1710151598",
+      },
+      {
+        color: "blue",
+        image:"https://cellecor.com/cdn/shop/files/Artboard1copy_6163289e-5889-4751-a040-7778da4bb979.png?v=1710151598",
+      },
+      {
+        color: "gray",
+        image:"https://cellecor.com/cdn/shop/files/Artboard1copy2_57b1b8fc-8262-43b5-8a6f-4144562e8e6c.png?v=1710151598",
+      },
+    ],
+    name: "Cellecor M1 Stew",
+    priceOne: "Rs. 3,999.00",
+    priceTwo: "Rs. 1,449.00",
+    discount: "64%",
+  },
 ];
 
-const BestSeller = () => {
+const DailyDeals = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [selectedImages, setSelectedImages] = useState({});
 
@@ -221,7 +236,7 @@ const BestSeller = () => {
     <>
 
     <div>
-      <h3 className="text-center text-4xl font-semibold mt-10">Best Seller</h3>
+      <h3 className="text-center text-4xl font-semibold lg:mt-20 mt-10">Daily Deals</h3>
     </div>
 
     <div className="w-full  py-5">
@@ -298,4 +313,4 @@ const BestSeller = () => {
   );
 };
 
-export default BestSeller;
+export default DailyDeals;

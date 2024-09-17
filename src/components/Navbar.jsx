@@ -23,28 +23,20 @@ const Navbar = () => {
 
         <div className="flex gap-10 font-semibold max-xl:hidden">
           <div>
-          <Link to='/' className="anime">Home</Link>
+          <Link to='/' className="anime">HOME</Link>
           </div>
           <div className="relative group">
-            <a href="#" className="anime">
-              SHOP BY CATEGORY
-            </a>
-            <div className="absolute hidden group-hover:block w-48 bg-white z-10">
+          <Link to='' className="anime">SHOP BY CATEGORY</Link>
+            <div className="absolute hidden group-hover:block w-60 font-light bg-white z-10">
               <ul>
                 <li className="m-2 py-2 border-b border-gray-300">
-                  <a href="#" className="anime">
-                    Smart TV
-                  </a>
+                <Link to='' className="anime">Smart TV</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
-                  <a href="#" className="anime">
-                    TWS
-                  </a>
+                <Link to='' className="anime">TWS</Link>
                 </li>
                 <li className="m-2 py-2">
-                  <a href="#" className="anime">
-                    Smart Watches
-                  </a>
+                <Link to='' className="anime">Smart Watches</Link>
                 </li>
               </ul>
             </div>
@@ -54,62 +46,52 @@ const Navbar = () => {
             <a href="#" className="anime">
               SUPPORT & WARRANTY
             </a>
-            <div className="absolute hidden group-hover:block w-48 bg-white z-10">
+            <div className="absolute hidden group-hover:block w-60 font-light bg-white z-10">
               <ul>
                 <li className="m-2 py-2 border-b border-gray-300">
-                  <a href="#" className="anime">
-                    Services Centers
-                  </a>
+                <Link to='' className="anime">Service Center</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
-                  <a href="#" className="anime">
-                    Warranty Registration
-                  </a>
+                <Link to='' className="anime">Warranty Registration</Link>
+                </li>
+                <li className="m-2 py-2 border-b border-gray-300">
+                  <Link to='/privacy-policy' className="anime">Privacy Policy</Link>
+                </li>
+                <li className="m-2 py-2 border-b border-gray-300">
+                <Link to='' className="anime">Return Policy</Link>
                 </li>
                 <li className="m-2 py-2">
-                  <Link to='/privacy-policy'>Privacy Policy</Link>
-                </li>
-                <li className="m-2 py-2">
-                  <a href="#" className="anime">
-                    Return Policy
-                  </a>
-                </li>
-                <li className="m-2 py-2">
-                  <a href="#" className="anime">
-                    Terms & Conditions
-                  </a>
+                <Link to='' className="anime">Terms & Conditions</Link>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="relative group">
-            <a href="#" className="anime">
-              COMPANY
-            </a>
-            <div className="absolute hidden group-hover:block w-48 bg-white z-10">
+          <Link to='' className="anime">COMPANY</Link>
+            <div className="absolute hidden group-hover:block w-60 font-light bg-white z-10">
               <ul>
                 <li className="m-2 py-2 border-b border-gray-300">    
                   <Link to='/about' className="anime">About  Us</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
-                  <a href="#" className="anime">
-                    Management
-                  </a>
+                <Link to='' className="anime">Management</Link>
+                </li>
+                <li className="m-2 py-2 border-b border-gray-300">
+                <Link to='' className="anime">Blog</Link>
+                </li>
+                <li className="m-2 py-2 border-b border-gray-300">
+                <Link to='' className="anime">Careers</Link>
                 </li>
                 <li className="m-2 py-2">
-                  <a href="#" className="anime">
-                    Blog
-                  </a>
+                <Link to='' className="anime">Contact Us</Link>
                 </li>
               </ul>
             </div>
           </div>
 
           <div>
-            <a href="#" className="anime">
-              CUSTOMER SUPPORT
-            </a>
+          <Link to='' className="anime">CUSTOMER SUPPORT</Link>
           </div>
         </div>
 
@@ -155,14 +137,14 @@ const Navbar = () => {
         {activeMenu === "main" && (
           <ul className="flex flex-col  text-lg text-[#232323]">
             <li className="border-b p-2">
-              <a href="#">HOME</a>
+            <Link to=''>HOME</Link>
             </li>
             <li
               className="border-b p-2"
               onClick={() => handleMenuClick("shop")}
             >
               <div className="flex items-center justify-between">
-                <a href="#">SHOP BY CATEGORY</a>
+              <Link to='' >SHOP BY CATEGORY</Link>
                 <i class="fa-solid fa-greater-than font-thin"></i>
               </div>
             </li>
@@ -171,7 +153,7 @@ const Navbar = () => {
               onClick={() => handleMenuClick("support")}
             >
               <div className="flex items-center justify-between">
-                <a href="#">SUPPORT & WARRANTY</a>
+              <Link to='' >SUPPORT & WARRANTY</Link>
                 <i class="fa-solid fa-greater-than font-thin"></i>
               </div>
             </li>
@@ -180,12 +162,12 @@ const Navbar = () => {
               onClick={() => handleMenuClick("company")}
             >
               <div className="flex items-center justify-between">
-                <a href="#">COMPANY</a>
+              <Link to='' >COMPANY</Link>
                 <i class="fa-solid fa-greater-than font-thin"></i>
               </div>
             </li>
             <li className="border-b p-3">
-              <a href="#">CUSTOMER SUPPORT</a>
+            <Link to='' >CUSTOMER SUPPORT</Link>
             </li>
             <li className="border-b p-3">
               <div className="flex items-center gap-1">
@@ -219,13 +201,13 @@ const Navbar = () => {
             </div>
             <ul className="flex flex-col h-[100vh]">
               <li className="border-b p-3">
-                <a href="#">Smart TV</a>
+              <Link to='' >Smart TV</Link>
               </li>
               <li className="border-b p-3">
-                <a href="#">TWS</a>
+              <Link to='' >TWS</Link>
               </li>
               <li className="border-b p-3">
-                <a href="#">Smart Watches</a>
+              <Link to='' >Smart Watches</Link>
               </li>
             </ul>
           </div>
@@ -242,19 +224,19 @@ const Navbar = () => {
             </div>
             <ul className="flex flex-col h-[100vh]">
               <li className="border-b p-3">
-                <a href="#">Services Centers</a>
+              <Link to='' >Service Center</Link>
               </li>
               <li className="border-b p-3">
-                <a href="#">Warranty Registration</a>
+              <Link to='' >Warranty Registration</Link>
               </li>
               <li className="border-b p-3">
-                <a href="#">Privacy Policy</a>
+              <Link to='' >Privacy Policy</Link>
               </li>
               <li className="border-b p-3">
-                <a href="#">Return Policy</a>
+              <Link to='' >Return Policy</Link>
               </li>
               <li className="border-b p-3">
-                <a href="#">Terms & Conditions</a>
+              <Link to='' >Terms & Conditions</Link>
               </li>
             </ul>
           </div>
@@ -271,19 +253,19 @@ const Navbar = () => {
             </div>
             <ul className="flex flex-col h-[100vh]">
               <li className="border-b p-3">
-                <a href="#">About Us</a>
+              <Link to='' >About Us</Link>
               </li>
               <li className="border-b p-3">
-                <a href="#">Management</a>
+              <Link to='' >Management</Link>
               </li>
               <li className="border-b p-3">
-                <a href="#">Blog</a>
+              <Link to='' >Blog</Link>
               </li>
               <li className="border-b p-3">
-                <a href="#">Careers</a>
+              <Link to='' >Careers</Link>
               </li>
               <li className="border-b p-3">
-                <a href="#">Contact Us</a>
+              <Link to='' >Contact Us</Link>
               </li>
             </ul>
           </div>
