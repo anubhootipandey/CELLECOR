@@ -49,19 +49,19 @@ const Navbar = () => {
             <div className="absolute hidden group-hover:block w-60 font-light bg-white z-10">
               <ul>
                 <li className="m-2 py-2 border-b border-gray-300">
-                <Link to='' className="anime">Service Center</Link>
+                <Link to='/service-center' className="anime">Service Center</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
-                <Link to='' className="anime">Warranty Registration</Link>
+                <Link to='/warrant-registration' className="anime">Warranty Registration</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
                   <Link to='/privacy-policy' className="anime">Privacy Policy</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
-                <Link to='' className="anime">Return Policy</Link>
+                <Link to='/return-policy' className="anime">Return Policy</Link>
                 </li>
                 <li className="m-2 py-2">
-                <Link to='' className="anime">Terms & Conditions</Link>
+                <Link to='/terms-conditions' className="anime">Terms & Conditions</Link>
                 </li>
               </ul>
             </div>

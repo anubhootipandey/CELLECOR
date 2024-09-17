@@ -7,6 +7,10 @@ import About from './components/Company/About'
 import Navbar from './components/Navbar';
 import PrivacyPolicy from './components/S&W/PrivacyPolicy';
 import Footer from './components/Footer/Footer';
+import ServiceCenter from './components/S&W/ServiceCenter';
+import ReturnPolicy from './components/S&W/ReturnPolicy';
+import TermsandCondition from './components/S&W/TermsandCondition';
+import WarrantyRegistration from './components/S&W/WarrantyRegistration';
 
 
 
@@ -20,7 +24,11 @@ const App = () => {
     <Routes>
       <Route exact path='/' element={<Home/>} />
       <Route exact path='/about' element={<About/>} />
+      <Route exact path='/service-center' element={<ServiceCenter />} />
       <Route exact path='/privacy-policy' element={<PrivacyPolicy />} />
+      <Route exact path='/return-policy' element={<ReturnPolicy />} />
+      <Route exact path='/terms-conditions' element={<TermsandCondition />} />
+      <Route exact path='/warrant-registration' element={<WarrantyRegistration />} />
     </Routes>
     <Footer />
     </BrowserRouter>
