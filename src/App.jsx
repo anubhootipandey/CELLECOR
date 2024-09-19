@@ -11,6 +11,7 @@ import ServiceCenter from './components/S&W/ServiceCenter';
 import ReturnPolicy from './components/S&W/ReturnPolicy';
 import TermsandCondition from './components/S&W/TermsandCondition';
 import WarrantyRegistration from './components/S&W/WarrantyRegistration';
+import CustomerSupport from './components/CustomerSupport';
 
 
 
@@ -29,6 +30,7 @@ const App = () => {
       <Route exact path='/return-policy' element={<ReturnPolicy />} />
       <Route exact path='/terms-conditions' element={<TermsandCondition />} />
       <Route exact path='/warrant-registration' element={<WarrantyRegistration />} />
+      <Route exact path='/customer-support' element={<CustomerSupport />} />
     </Routes>
     <Footer />
     </BrowserRouter>
