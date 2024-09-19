@@ -81,10 +81,10 @@ const Navbar = () => {
                 <Link to='' className="anime">Blog</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
-                <Link to='' className="anime">Careers</Link>
+                <Link to='/career' className="anime">Careers</Link>
                 </li>
                 <li className="m-2 py-2">
-                <Link to='' className="anime">Contact Us</Link>
+                <Link to='/contact' className="anime">Contact Us</Link>
                 </li>
               </ul>
             </div>
@@ -265,7 +265,7 @@ const Navbar = () => {
               <Link to='' >Careers</Link>
               </li>
               <li className="border-b p-3">
-              <Link to='' >Contact Us</Link>
+              <Link to='/contact' >Contact Us</Link>
               </li>
             </ul>
           </div>
