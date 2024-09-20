@@ -13,6 +13,8 @@ import TermsandCondition from './components/S&W/TermsandCondition';
 import WarrantyRegistration from './components/S&W/WarrantyRegistration';
 import Career from './components/Company/Career';
 import Contact from './components/Company/Contact';
+import Blog from './components/Company/Blog';
+import Management from './components/Company/Management';
 
 
 
@@ -33,7 +35,8 @@ const App = () => {
       <Route exact path='/warrant-registration' element={<WarrantyRegistration />} />
       <Route exact path='/career' element={<Career />} />
       <Route exact path='/contact' element={<Contact />} />
-
+      <Route exact path='/blog' element={<Blog />} />
+      <Route exact path='/management' element={<Management />} />
     </Routes>
     <Footer />
     </BrowserRouter>

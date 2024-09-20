@@ -75,10 +75,10 @@ const Navbar = () => {
                   <Link to='/about' className="anime">About  Us</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
-                <Link to='' className="anime">Management</Link>
+                <Link to='/management' className="anime">Management</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
-                <Link to='' className="anime">Blog</Link>
+                <Link to='/blog' className="anime">Blog</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
                 <Link to='/career' className="anime">Careers</Link>
@@ -91,7 +91,7 @@ const Navbar = () => {
           </div>
 
           <div>
-          <Link to='' className="anime">CUSTOMER SUPPORT</Link>
+          <Link to='/contact' className="anime">CUSTOMER SUPPORT</Link>
           </div>
         </div>
 
@@ -167,7 +167,7 @@ const Navbar = () => {
               </div>
             </li>
             <li className="border-b p-3">
-            <Link to='' >CUSTOMER SUPPORT</Link>
+            <Link to='/contact' >CUSTOMER SUPPORT</Link>
             </li>
             <li className="border-b p-3">
               <div className="flex items-center gap-1">
