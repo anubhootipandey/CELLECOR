@@ -91,7 +91,10 @@ const Navbar = () => {
           </div>
 
           <div>
-          <Link to='/contact' className="anime">CUSTOMER SUPPORT</Link>
+
+
+          <Link to='/customer-support' className="anime">CUSTOMER SUPPORT</Link>
+
           </div>
         </div>
 
