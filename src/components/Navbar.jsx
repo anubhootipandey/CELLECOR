@@ -36,7 +36,7 @@ const Navbar = () => {
                 <Link to='' className="anime">TWS</Link>
                 </li>
                 <li className="m-2 py-2">
-                <Link to='' className="anime">Smart Watches</Link>
+                <Link to='/smart-watches' className="anime">Smart Watches</Link>
                 </li>
               </ul>
             </div>

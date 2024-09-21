@@ -16,6 +16,7 @@ import Career from './components/Company/Career';
 import Contact from './components/Company/Contact';
 
 import CustomerSupport from './components/CustomerSupport';
+import SmartWatches from './components/SOC/SmartWatches';
 
 
 
@@ -40,6 +41,7 @@ const App = () => {
       <Route exact path='/contact' element={<Contact />} />
 
       <Route exact path='/customer-support' element={<CustomerSupport />} />
+      <Route exact path='/smart-watches' element={<SmartWatches />} />
 
     </Routes>
     <Footer />
