@@ -42,6 +42,8 @@ const App = () => {
       <Route exact path='/contact' element={<Contact />} />
 
       <Route exact path='/blog' element={<Blog />} />
+      <Route exact path='/management' element={<Management />} />
+
 
 
       <Route exact path='/customer-support' element={<CustomerSupport />} />
