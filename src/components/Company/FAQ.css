@@ -1,0 +1,99 @@
+.faq-container {
+  width: 100%;
+
+  padding-top: 3rem;
+}
+
+.faq-section {
+  margin-bottom: 3rem;
+}
+
+.faq-item {
+  margin-top: 1rem;
+}
+
+.faq-answer-wrapper {
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+.faq-question {
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border: 1px solid rgb(232, 229, 229);
+  box-shadow: 1px 2px 0px 0px rgb(194, 193, 193);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  padding: 0rem 1rem;
+  padding-top: 0.5rem;
+  color: rgb(73, 72, 72);
+  margin: 0;
+}
+.faq-question:hover {
+  background-color: black;
+  color: cyan;
+}
+.img {
+  /* max-width: 1920px; */
+  width: 92%;
+  height: auto;
+  margin: auto;
+}
+.faq-section h2 {
+  font-size: 1.2rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(74, 72, 72);
+  font-weight: 600;
+}
+.Fa-answer {
+  font-size: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: white;
+  border: 1px solid rgb(232, 229, 229);
+  border-top: 1px solid rgb(232, 229, 229);
+  border-left: 1px solid rgb(232, 229, 229);
+  border-right: 1px solid rgb(232, 229, 229);
+  padding: 2.4rem 1rem;
+  color: rgb(31, 28, 28);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-style: bold;
+  padding-top: 2rem;
+}
+.ans-List {
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-top: 0.8rem;
+  text-decoration: dotted;
+}
+.icons {
+  position: relative;
+  bottom: 0.9rem;
+}
+.FAQ-heading {
+  font-weight: 700;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  padding-left: 4.6rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.bold-text {
+  font-size: 0.7rem;
+  color: black;
+  font-weight: 800;
+  letter-spacing: none;
+}
+.List-container {
+  padding: 1rem 2rem;
+  line-height: 2rem;
+}
+.Fa-answer p {
+  line-height: 1.7rem;
+}
