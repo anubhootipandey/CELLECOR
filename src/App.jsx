@@ -14,7 +14,6 @@ import WarrantyRegistration from './components/S&W/WarrantyRegistration';
 
 import Career from './components/Company/Career';
 import Contact from './components/Company/Contact';
-import Blog from './components/Company/Blog';
 import Management from './components/Company/Management';
 
 import CustomerSupport from './components/CustomerSupport';
