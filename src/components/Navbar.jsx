@@ -36,7 +36,7 @@ const Navbar = () => {
                 <Link to='' className="anime">TWS</Link>
                 </li>
                 <li className="m-2 py-2">
-                <Link to='' className="anime">Smart Watches</Link>
+                <Link to='/smart-watches' className="anime">Smart Watches</Link>
                 </li>
               </ul>
             </div>
@@ -49,19 +49,19 @@ const Navbar = () => {
             <div className="absolute hidden group-hover:block w-60 font-light bg-white z-10">
               <ul>
                 <li className="m-2 py-2 border-b border-gray-300">
-                <Link to='' className="anime">Service Center</Link>
+                <Link to='/service-center' className="anime">Service Center</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
-                <Link to='' className="anime">Warranty Registration</Link>
+                <Link to='/warrant-registration' className="anime">Warranty Registration</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
                   <Link to='/privacy-policy' className="anime">Privacy Policy</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
-                <Link to='' className="anime">Return Policy</Link>
+                <Link to='/return-policy' className="anime">Return Policy</Link>
                 </li>
                 <li className="m-2 py-2">
-                <Link to='' className="anime">Terms & Conditions</Link>
+                <Link to='/terms-conditions' className="anime">Terms & Conditions</Link>
                 </li>
               </ul>
             </div>
@@ -75,23 +75,26 @@ const Navbar = () => {
                   <Link to='/about' className="anime">About  Us</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
-                <Link to='' className="anime">Management</Link>
+                <Link to='/management' className="anime">Management</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
                 <Link to='/blog' className="anime">Blog</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
-                <Link to='' className="anime">Careers</Link>
+                <Link to='/career' className="anime">Careers</Link>
                 </li>
                 <li className="m-2 py-2">
-                <Link to='' className="anime">Contact Us</Link>
+                <Link to='/contact' className="anime">Contact Us</Link>
                 </li>
               </ul>
             </div>
           </div>
 
           <div>
-          <Link to='' className="anime">CUSTOMER SUPPORT</Link>
+
+
+          <Link to='/customer-support' className="anime">CUSTOMER SUPPORT</Link>
+
           </div>
         </div>
 
@@ -167,7 +170,7 @@ const Navbar = () => {
               </div>
             </li>
             <li className="border-b p-3">
-            <Link to='' >CUSTOMER SUPPORT</Link>
+            <Link to='/contact' >CUSTOMER SUPPORT</Link>
             </li>
             <li className="border-b p-3">
               <div className="flex items-center gap-1">
@@ -265,7 +268,7 @@ const Navbar = () => {
               <Link to='' >Careers</Link>
               </li>
               <li className="border-b p-3">
-              <Link to='' >Contact Us</Link>
+              <Link to='/contact' >Contact Us</Link>
               </li>
             </ul>
           </div>

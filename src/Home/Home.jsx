@@ -8,6 +8,7 @@ import img2 from "../assets/img2.jpg"
 import img3 from "../assets/img3.jpg"
 import watch from "../assets/watch.jpg"
 import DailyDeals from "./DailyDeals";
+import LatestBlog from "./LatestBlog/LatestBlog"
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
 
       <ImageSlider/>
 
-      <div className="flex flex-col sm:flex-col lg:flex-row justify-center gap-5 w-full justify-center overflow-hidden p-2">
+      <div className="flex flex-col sm:flex-col lg:flex-row  gap-5 w-full justify-center overflow-hidden p-2">
         <div className="overflow-hidden rounded-xl">
           <img
             src="https://cellecor.com/cdn/shop/files/Artboard_2_4_775x.jpg?v=1719559425"
@@ -62,6 +63,7 @@ const Home = () => {
       </div>
 
       <DailyDeals/>
+      <LatestBlog/>
     </>
   );
 };
