@@ -30,10 +30,10 @@ const Navbar = () => {
             <div className="absolute hidden group-hover:block w-60 font-light bg-white z-10">
               <ul>
                 <li className="m-2 py-2 border-b border-gray-300">
-                <Link to='' className="anime">Smart TV</Link>
+                <Link to='/smarttv' className="anime">Smart TV</Link>
                 </li>
                 <li className="m-2 py-2 border-b border-gray-300">
-                <Link to='' className="anime">TWS</Link>
+                <Link to='/tws' className="anime">TWS</Link>
                 </li>
                 <li className="m-2 py-2">
                 <Link to='/smart-watches' className="anime">Smart Watches</Link>

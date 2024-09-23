@@ -26,6 +26,9 @@ import BropodsBlog from './components/Blog/BropodsBlog';
 import TizenOsBlog from './components/Blog/TizenOsBlog';
 import OasisM6Blog from './components/Blog/OasisM6Blog';
 import BropodsAceBlogs from './components/Blog/BropodsAceBlogs'
+import SmartTv from './components/SOC/SmartTv';
+import TWS from './components/SOC/TWS';
+
 
 
 
@@ -68,6 +71,10 @@ const App = () => {
 
       <Route exact path='/customer-support' element={<CustomerSupport />} />
       <Route exact path='/smart-watches' element={<SmartWatches />} />
+      <Route exact path='/smarttv' element={<SmartTv />} />
+      <Route exact path='/tws' element={<TWS />} />
+
+
 
 
     </Routes>
