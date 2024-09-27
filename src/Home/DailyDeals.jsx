@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 const CustomPrevArrow = (props) => {
   const { className, onClick } = props;
@@ -180,9 +181,183 @@ const products = [
   },
 ];
 
+const CartPopup = ({ cartItem, closePopup, quantity, setQuantity }) => {
+  const totalPrice =
+    (parseFloat(cartItem.priceTwo.replace(/Rs\. /, "").replace(/,/g, "")) ||
+      0) * quantity;
+
+  const increment = () => {
+    setQuantity((prev) => prev + 1);
+  };
+
+  const decrement = () => {
+    setQuantity((prev) => (prev > 1 ? prev - 1 : 0));
+  };
+
+  const [isOpenOrder, setIsOpenOrder] = useState(false);
+  const [isOpenTag, setIsOpenTag] = useState(false);
+
+  const toggleMenuOrder = () => {
+    setIsOpenOrder(!isOpenOrder);
+  };
+
+  const toggleMenuTag = () => {
+    setIsOpenTag(!isOpenTag);
+  };
+
+  return (
+    <div className="fixed inset-0 top-0 flex justify-end bg-black bg-opacity-50 z-50 overflow-y-auto">
+      <div className="bg-white px-2 relative w-[22rem]">
+        <div className="flex justify-between items-center my-5">
+          <p className="text-xl font-semibold">Shopping Cart</p>
+          <button onClick={closePopup}>
+            <i className="fa-solid fa-times text-xl"></i>
+          </button>
+        </div>
+        {quantity > 0 ? (
+          <>
+            <p className="text-lg text-[#727272]">{quantity} items</p>
+
+            <p className="text-[#69C69C] text-lg">
+              You qualify for free shipping!
+            </p>
+
+            <div className="flex items-center my-5">
+              <img
+                src={cartItem.defaultImage}
+                alt=""
+                className="w-24 h-24 mb-3 mx-auto"
+              />
+              <div className="flex flex-col gap-3">
+                <p className="text-lg">{cartItem.name}</p>
+                <div className="flex gap-1">
+                  <p className="line-through">{cartItem.priceOne}</p>
+                  <p className="text-[#416C8F] font-semibold">
+                    {cartItem.priceTwo}
+                  </p>
+                </div>
+                <div className="flex justify-center items-center mt-2 border-2 w-20">
+                  <button onClick={decrement} className=" p-2 rounded-l-lg">
+                    -
+                  </button>
+                  <span className="mx-2 text-lg">{quantity}</span>
+                  <button onClick={increment} className=" p-2 rounded-r-lg">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center text-4xl">
+              <button className="border-2 p-3" onClick={toggleMenuOrder}>
+                <i class="fa-regular fa-clipboard"></i>
+              </button>
+              <button className="border-2 p-3" onClick={toggleMenuTag}>
+                <i class="fa-solid fa-tag"></i>
+              </button>
+            </div>
+
+            {isOpenOrder && (
+              <div className="fixed w-[21rem] px-3 py-10 bottom-2 bg-white border-t-2">
+                <div className="flex items-center gap-2">
+                  <i class="fa-regular fa-clipboard text-xl"></i>
+                  <p className="text-lg py-2 font-semibold">
+                    Order Special Instructions
+                  </p>
+                </div>
+
+                <textarea
+                  className="border-2 w-full h-28 p-3"
+                  placeholder="Order Special Instructions"
+                ></textarea>
+
+                <div className="flex flex-col justify center gap-1 my-1">
+                  <button className="text-white bg-black p-4 hover:text-black hover:bg-white border-2 border-black text-base font-semibold">
+                    SAVE
+                  </button>
+
+                  <button
+                    className="text-black bg-white p-4 hover:text-white hover:bg-black border-2 border-black text-base font-semibold"
+                    onClick={toggleMenuOrder}
+                  >
+                    CANCEL
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {isOpenTag && (
+              <div className="fixed w-[21rem]  bottom-2 bg-white border-t-2 px-3 py-10">
+                <div className="flex items-center gap-2">
+                  <i class="fa-solid fa-tag text-xl"></i>
+                  <p className="text-lg font-semibold">Add A Coupon</p>
+                </div>
+
+                <p className="text-lg text-[#969696]">Coupon code content</p>
+
+                <input type="text" className="w-full border-2 h-12 my-2 p-3" />
+
+                <div className="flex flex-col justify center gap-1 my-1">
+                  <button className="text-white bg-black p-4 hover:text-black hover:bg-white border-2 border-black text-base font-semibold">
+                    SAVE
+                  </button>
+
+                  <button
+                    className="text-black bg-white p-4 hover:text-white hover:bg-black border-2 border-black text-base font-semibold"
+                    onClick={toggleMenuTag}
+                  >
+                    CANCEL
+                  </button>
+                </div>
+
+              </div>
+            )}
+
+            <div className="my-4">
+              <div className="flex justify-between text-lg font-semibold ">
+              <p>Subtotal:</p>
+              <p >Rs.{totalPrice.toFixed(2)}</p>
+              </div>
+              <div className="flex justify-between text-lg font-semibold ">
+              <p>Total:</p>
+              <p className="text-xl">Rs.{totalPrice.toFixed(2)}</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-2 xl:gap-5 xl:py-16 py-5">
+              <button className="bg-black text-white p-3 rounded-3xl font-semibold">
+                BUY NOW
+              </button>
+              <button className="bg-white text-black border border-black p-3 font-semibold hover:bg-black hover:text-white">
+                VIEW CART
+              </button>
+            </div>
+            
+          </>
+        ) : (
+          <div className="px-2">
+            <p className="text-[#727272] text-lg">0 items</p>
+            <p className="text-[#727272] ">Free shipping for all orders over Rs. 800.00!
+            </p>
+            <p className="text-center text-lg text-[#727272] py-5">Your cart is empty
+            </p>
+            <div className=" text-center ">
+            <Link to="" className="bg-white font-medium border border-black py-3 px-16 hover:bg-black hover:text-white">CONTINUE SHOPPING</Link>
+            </div>
+          </div>
+          
+        )}
+      </div>
+    </div>
+  );
+};
+
 const DailyDeals = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [selectedImages, setSelectedImages] = useState({});
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [cartItem, setCartItem] = useState({});
+  const [quantity, setQuantity] = useState(0)
 
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
@@ -197,6 +372,12 @@ const DailyDeals = () => {
       ...prevImages,
       [index]: image,
     }));
+  };
+
+  const handleAddToCart = (product) => {
+    setCartItem(product);
+    setQuantity(1); 
+    setIsPopupOpen(true);
   };
 
   const settings = {
@@ -257,7 +438,7 @@ const DailyDeals = () => {
               <button
                 className={`max-lg:hidden absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 text font-semibold transition-opacity duration-1000 ${hoveredIndex === index ? "opacity-100" : "opacity-0"}`}
               >
-                <span className="bg-[#2E4B31] text-white text-lg px-14 py-3 hover:text-[#2E4B31] hover:bg-white hover:border border-[#2E4B31]">
+                <span className="bg-[#2E4B31] text-white text-lg px-14 py-3 hover:text-[#2E4B31] hover:bg-white hover:border border-[#2E4B31]" onClick={() => handleAddToCart(product)}>
                   ADD TO CART
                 </span>
               </button>
@@ -277,7 +458,7 @@ const DailyDeals = () => {
 
 
               {/* Add to cart button for mobile view */}
-              <button className="text-center bg-[#2E4B31] w-full text-white p-3 rounded-xl lg:hidden">
+              <button className="text-center bg-[#2E4B31] w-full text-white p-3 rounded-xl lg:hidden" onClick={() => handleAddToCart(product)}>
                 Add to cart
               </button>
 
@@ -308,6 +489,16 @@ const DailyDeals = () => {
         ))}
       </Slider>
     </div>
+
+    {/* Popup for Cart Item */}
+    {isPopupOpen && (
+        <CartPopup
+          cartItem={cartItem}
+          closePopup={() => setIsPopupOpen(false)}
+          quantity={quantity}
+          setQuantity={setQuantity}
+        />
+      )}
 
     </>
   );
