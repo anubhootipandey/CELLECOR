@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Home.css";
 import { Link } from "react-router-dom";
 
+import QuickViewPopup from "./QuickViewPopup";
+
 const CustomPrevArrow = (props) => {
   const { className, onClick } = props;
   return (
@@ -359,6 +361,9 @@ const DailyDeals = () => {
   const [cartItem, setCartItem] = useState({});
   const [quantity, setQuantity] = useState(0)
 
+  const [quickViewItem, setQuickViewItem] = useState(null);
+  const [isPopup, setIsPopup] = useState(false);
+
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
   };
@@ -374,10 +379,18 @@ const DailyDeals = () => {
     }));
   };
 
+
+
   const handleAddToCart = (product) => {
     setCartItem(product);
     setQuantity(1); 
     setIsPopupOpen(true);
+  };
+
+  const handleQuickView = (product) => {
+    setQuickViewItem(product);
+    setQuantity(1); 
+    setIsPopup(true);
   };
 
   const settings = {
@@ -443,7 +456,8 @@ const DailyDeals = () => {
                 </span>
               </button>
 
-              <button className="absolute top-1 left-1 rounded-lg lg:opacity-0 opacity-100 group-hover:opacity-100 bg-white text-black font-semibold text-lg py-1 px-2 transition-opacity duration-500">
+              <button className="absolute top-1 left-1 rounded-lg lg:opacity-0 opacity-100 group-hover:opacity-100 bg-white text-black font-semibold text-lg py-1 px-2 transition-opacity duration-500"
+              onClick={() => handleQuickView(product)}>
                 <span className="mr-2">
                   <i className="fa-solid fa-eye"></i>
                 </span>
@@ -490,6 +504,8 @@ const DailyDeals = () => {
       </Slider>
     </div>
 
+    
+
     {/* Popup for Cart Item */}
     {isPopupOpen && (
         <CartPopup
@@ -498,7 +514,19 @@ const DailyDeals = () => {
           quantity={quantity}
           setQuantity={setQuantity}
         />
+      )} 
+
+
+{isPopup && quickViewItem && (
+        <QuickViewPopup
+          product={quickViewItem}
+          closePopup={() => setIsPopup(false)}
+          quantity={quantity}
+          setQuantity={setQuantity}
+          />
       )}
+
+
 
     </>
   );

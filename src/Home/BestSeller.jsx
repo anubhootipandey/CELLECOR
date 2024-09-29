@@ -5,6 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import "./Home.css";
 import { Link } from "react-router-dom";
 
+import QuickViewPopup from "./QuickViewPopup";
+
 const CustomPrevArrow = (props) => {
   const { className, onClick } = props;
   return (
@@ -12,7 +14,8 @@ const CustomPrevArrow = (props) => {
       className={`${className} custom-prev-arrow`}
       onClick={onClick}
       aria-label="Previous Slide"
-    />
+    >
+    </button>
   );
 };
 
@@ -23,7 +26,8 @@ const CustomNextArrow = (props) => {
       className={`${className} custom-next-arrow`}
       onClick={onClick}
       aria-label="Next Slide"
-    />
+    >
+    </button>
   );
 };
 
@@ -367,7 +371,10 @@ const BestSeller = () => {
   const [selectedImages, setSelectedImages] = useState({});
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [cartItem, setCartItem] = useState({});
-  const [quantity, setQuantity] = useState(0); 
+  const [quantity, setQuantity] = useState(0)
+
+  const [quickViewItem, setQuickViewItem] = useState(null);
+  const [isPopup, setIsPopup] = useState(false);
 
   const handleMouseEnter = (index) => {
     setHoveredIndex(index);
@@ -384,10 +391,18 @@ const BestSeller = () => {
     }));
   };
 
+
+
   const handleAddToCart = (product) => {
     setCartItem(product);
     setQuantity(1); 
     setIsPopupOpen(true);
+  };
+
+  const handleQuickView = (product) => {
+    setQuickViewItem(product);
+    setQuantity(1); 
+    setIsPopup(true);
   };
 
   const settings = {
@@ -425,98 +440,106 @@ const BestSeller = () => {
 
   return (
     <>
-      <div>
-        <h3 className="text-center text-4xl font-semibold mt-10">
-          Best Seller
-        </h3>
-      </div>
 
-      <div className="w-full py-5">
-        <Slider {...settings}>
-          {products.map((product, index) => (
-            <div key={product.id} className="p-3">
-              <div
-                className="relative group"
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
+    <div>
+      <h3 className="text-center text-4xl font-semibold lg:mt-20 mt-10">Best Seller</h3>
+    </div>
+
+    <div className="w-full  py-5">
+      <Slider {...settings}>
+        {products.map((product, index) => (
+          <div key={product.id} className="p-3">
+            <div
+              className="relative group"
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <img
+                src={selectedImages[index] || (hoveredIndex === index ? product.hoverImage : product.defaultImage)}
+                alt={product.name}
+                className="w-full h-auto object-cover border transition-transform duration-1000 transform group-hover:scale-105"
+              />
+
+              <button
+                className={`max-lg:hidden absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 text font-semibold transition-opacity duration-1000 ${hoveredIndex === index ? "opacity-100" : "opacity-0"}`}
               >
-                <img
-                  src={
-                    selectedImages[index] ||
-                    (hoveredIndex === index
-                      ? product.hoverImage
-                      : product.defaultImage)
-                  }
-                  alt={product.name}
-                  className="w-full h-auto object-cover border transition-transform duration-1000 transform group-hover:scale-105"
-                />
+                <span className="bg-[#2E4B31] text-white text-lg px-14 py-3 hover:text-[#2E4B31] hover:bg-white hover:border border-[#2E4B31]" onClick={() => handleAddToCart(product)}>
+                  ADD TO CART
+                </span>
+              </button>
 
-                <button
-                  onClick={() => handleAddToCart(product)}
-                  className={`max-lg:hidden absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 font-semibold transition-opacity duration-1000 ${
-                    hoveredIndex === index ? "opacity-100" : "opacity-0"
-                  }`}
-                >
-                  <span className="bg-[#2E4B31] text-white text-lg px-14 py-3 hover:text-[#2E4B31] hover:bg-white hover:border border-[#2E4B31]">
-                    ADD TO CART
-                  </span>
-                </button>
-
-                <button className="absolute top-1 left-1 rounded-lg lg:opacity-0 opacity-100 group-hover:opacity-100 bg-white text-black font-semibold text-lg py-1 px-2 transition-opacity duration-500">
-                  <span className="mr-2">
-                    <i className="fa-solid fa-eye"></i>
-                  </span>
-                  Quick View
-                </button>
-                <div className="absolute top-2 right-2 bg-[#2274B6] text-white text-sm font-medium py-1 px-2">
-                  Save {product.discount}
-                </div>
-              </div>
-
-              <div className="text-center bg-[#ECECEC] p-1">
-                {/* Add to cart button for mobile view */}
-                <button
-                  onClick={() => handleAddToCart(product)}
-                  className="text-center bg-[#2E4B31] w-full text-white p-3 rounded-xl lg:hidden"
-                >
-                  Add to cart
-                </button>
-
-                <h3 className="text-xl p-3">{product.name}</h3>
-                <div className="flex items-center justify-center gap-2">
-                  <p className="text-black font-semibold line-through">
-                    {product.priceOne}
-                  </p>
-                  <p className="text-lg font-semibold text-[#416C8F]">
-                    {product.priceTwo}
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex justify-center p-4 rounded-b-xl bg-[#ECECEC]">
-                {product.colors.map((colorOption) => (
-                  <button
-                    key={colorOption.color}
-                    className={`w-6 h-6 m-[2px] rounded-full border focus:ring-2 ring-offset-2 ring-${colorOption.color}-300`}
-                    style={{ backgroundColor: colorOption.color }}
-                    onClick={() => handleColorChange(index, colorOption.image)}
-                  ></button>
-                ))}
+              <button className="absolute top-1 left-1 rounded-lg lg:opacity-0 opacity-100 group-hover:opacity-100 bg-white text-black font-semibold text-lg py-1 px-2 transition-opacity duration-500"
+              onClick={() => handleQuickView(product)}>
+                <span className="mr-2">
+                  <i className="fa-solid fa-eye"></i>
+                </span>
+                Quick View
+              </button>
+              <div className="absolute top-2 right-2 bg-[#2274B6] text-white text-sm font-medium py-1 px-2">
+                Save {product.discount}
               </div>
             </div>
-          ))}
-        </Slider>
-      </div>
 
-      {/* Popup for Cart Item */}
-      {isPopupOpen && (
+            <div className="text-center bg-[#ECECEC] p-1">
+
+
+              {/* Add to cart button for mobile view */}
+              <button className="text-center bg-[#2E4B31] w-full text-white p-3 rounded-xl lg:hidden" onClick={() => handleAddToCart(product)}>
+                Add to cart
+              </button>
+
+              
+
+              <h3 className="text-xl p-3">{product.name}</h3>
+              <div className="flex items-center justify-center gap-2">
+                <p className="text-black font-semibold line-through">
+                  {product.priceOne}
+                </p>
+                <p className="text-lg font-semibold text-[#416C8F]">
+                  {product.priceTwo}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex justify-center p-4 rounded-b-xl bg-[#ECECEC]">
+              {product.colors.map((colorOption) => (
+                <button
+                  key={colorOption.color}
+                  className={`w-6 h-6 m-[2px] rounded-full border focus:ring-2 ring-offset-2 ring-${colorOption.color}-300`}
+                  style={{ backgroundColor: colorOption.color }}
+                  onClick={() => handleColorChange(index, colorOption.image)}
+                ></button>
+              ))}
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
+
+    
+
+    {/* Popup for Cart Item */}
+    {isPopupOpen && (
         <CartPopup
           cartItem={cartItem}
           closePopup={() => setIsPopupOpen(false)}
           quantity={quantity}
           setQuantity={setQuantity}
         />
+      )} 
+
+
+{isPopup && quickViewItem && (
+        <QuickViewPopup
+          product={quickViewItem}
+          closePopup={() => setIsPopup(false)}
+          quantity={quantity}
+          setQuantity={setQuantity}
+          />
       )}
+
+
+
     </>
   );
 };
